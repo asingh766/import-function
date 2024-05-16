@@ -4,7 +4,7 @@ PROJECT_ID="aafes-poc-378616"
 REGION="us-central1"
 
 
-func_list="aafes-abandon-cart-qa aafes-subscriptions-qa aafes-subscriptions aafes-abandon-cart"
+func_list="aafes-abandon-cart-qa"
 
 # FUNCTIONS=$(gcloud functions list --project="$PROJECT_ID" --format="value(name)")
 # for FUNCTION in "${FUNCTIONS[@]}"; do
@@ -17,7 +17,6 @@ cat <<EOF > $provider_file_path
 provider "google" {
   project = "$PROJECT_ID"
   region  = "$REGION"
-  credentials = file("$credentials")
 }
 EOF
 fi
