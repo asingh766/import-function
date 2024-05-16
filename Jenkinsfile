@@ -1,6 +1,8 @@
 pipeline {
     agent any
-    
+    environment {
+        CREDENTIALS_ID = credentials('gcp-sa-key')
+        }
     triggers {
         cron('H */12 * * *') // Run every 12 hours
     }
@@ -17,6 +19,7 @@ pipeline {
         stage('Run script file') {
             steps {
                 script {
+                    sh'gcloud auth activate-service-account --key-file=$CREDENTIALS_ID'
                     sh 'chmod +x import_functions.sh'
                     sh './import_functions.sh'    
                 }
