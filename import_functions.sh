@@ -1,10 +1,10 @@
 #!/bin/bash
 
-PROJECT_ID="aafes-poc-378616"
+PROJECT_ID="aafes-myecp"
 REGION="us-central1"
 
 
-func_list="aafes-abandon-cart-qa"
+func_list="AccountSummary"
 
 # FUNCTIONS=$(gcloud functions list --project="$PROJECT_ID" --format="value(name)")
 # for FUNCTION in "${FUNCTIONS[@]}"; do
