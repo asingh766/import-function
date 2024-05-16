@@ -2,7 +2,7 @@
 
 PROJECT_ID="aafes-poc-378616"
 REGION="us-central1"
-credentials="/home/asingh766/.config/gcloud/aafes-poc-378616-bb1dff9c871e.json"
+
 
 func_list="aafes-abandon-cart-qa aafes-subscriptions-qa aafes-subscriptions aafes-abandon-cart"
 

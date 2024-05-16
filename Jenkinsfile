@@ -8,14 +8,15 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git ''
+                git branch: 'main',
+                url: 'git@github.com:asingh766/import-function.git', 
             }
         }
         
         stage('Run script file') {
             steps {
                 script {
-                    sh 'sh import_functions.sh'
+                    sh './import_functions.sh'
                     
                 }
             }
